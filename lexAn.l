@@ -1,6 +1,6 @@
 %{
 #include <stdlib.h>
-#include "yapl.h"
+#include "token_header.h"
 #include "y.tab.h"
 void yyerror(char *);
 %}
@@ -18,7 +18,9 @@ void yyerror(char *);
 
 [<=+*;\[\]] { return *yytext; }
 
-[ \t\n]+        ;       /* ignore whitespace */
+[ \t]+        ;       /* ignore whitespace */
+
+"\n" 	yylineno++;
 
 .               yyerror("Unknown character");
 %%

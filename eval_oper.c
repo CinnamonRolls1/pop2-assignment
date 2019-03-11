@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "yapl.h"
+#include "token_header.h"
 #include "y.tab.h"
 
 int ex(nodeType *p) {

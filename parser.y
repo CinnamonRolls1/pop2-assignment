@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
-#include "yapl.h"
+#include "token_header.h"
 
 /* prototypes */
 nodeType *opr(int oper, int nops, ...);
